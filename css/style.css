@@ -1,0 +1,121 @@
+:root {
+  --paleBlue: hsl(225, 100%, 94%);
+  --brightBlue: hsl(245, 75%, 52%);
+  --veryPaleBlue: hsl(225, 100%, 98%);
+  --desaturatedBlue: hsl(224, 23%, 55%);
+  --darkBlue: hsl(223, 47%, 23%);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Red Hat Display', sans-serif;
+  background: var(--veryPaleBlue);
+  text-align: center;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+button {
+  font-family: inherit;
+}
+p {
+  font-size: 16px;
+  color: var(--desaturatedBlue);
+}
+.btn {
+  padding: 5px 10px;
+  font-weight: bold;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  transition: all 0.8s ease-in-out;
+}
+.body__bg {
+  background-image: url('./images/pattern-background-mobile.svg') no-repeat
+    center/cover;
+  height: 50vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+}
+
+.container {
+  background: #fff;
+  margin: 20px;
+  padding-bottom: 20px;
+}
+.hero-image {
+  width: 100%;
+  border-radius: 5px 5px 0px 0px;
+}
+.container h1 {
+  color: var(--darkBlue);
+  margin: 30px 0;
+}
+.pricing {
+  background: var(--veryPaleBlue);
+  width: 90%;
+  padding: 20px;
+  margin: 20px auto;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.pricing__infos {
+  display: flex;
+  align-items: center;
+}
+.pricing__infos img {
+  margin-right: 20px;
+}
+.container p {
+  padding: 0 30px;
+}
+.btn-change {
+  color: var(--brightBlue);
+  text-decoration: underline;
+}
+.btn-change:hover {
+  opacity: 0.8;
+}
+.btn-primary {
+  background: var(--brightBlue);
+  color: #fff;
+  padding: 10px 30px;
+  border-radius: 10px;
+}
+.btn-primary:hover {
+  opacity: 0.8;
+}
+.btn-secondary {
+  color: var(--desaturatedBlue);
+  margin-top: 5px;
+}
+.btn-secondary:hover {
+  color: var(--darkBlue);
+}
+.buttons {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 750px) {
+  .body__bg {
+    background-image: url('./images/pattern-background-desktop.svg') no-repeat
+      center/cover;
+  }
+  .container {
+    width: 500px;
+  }
+}
